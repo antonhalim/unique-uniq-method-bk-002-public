@@ -1,5 +1,16 @@
 class Array
+  require 'pry'
+
+
   def unique_uniq
-    # code goes here
+    result = []
+    result << self[0]
+    self.each do |char|
+      if result.include?(char) != true
+        result << char
+      end
+  end
+  result
+# binding.pry
   end
 end
